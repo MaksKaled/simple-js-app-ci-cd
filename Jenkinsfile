@@ -33,7 +33,7 @@ pipeline {
 
         stage('Push to Docker Hub') {
             steps {
-                withDockerRegistry([credentialsId: 'dockerhub', url: 'https://index.docker.io/v1/']) {
+                withDockerRegistry([credentialsId: 'makskaled-dockerhub', url: 'https://index.docker.io/v1/']) {
                     sh 'docker push $IMAGE_NAME'
                 }
             }

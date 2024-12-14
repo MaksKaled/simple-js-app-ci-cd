@@ -9,7 +9,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/MaksKaled/simple-js-app-ci-cd.git'
+                
+                git[url: 'https://github.com/MaksKaled/simple-js-app-ci-cd.git', branch: 'main']
             }
         }
 
